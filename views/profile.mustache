@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css"  type="text/css">
+</head>
+<body class="container">
+
+
+    <span>{{timestamp}}</span>
+    <h1>Name: {{name}} </h1>
+    <img src="{{image}}" class="profile-image">
+    <h2>Occupation: {{occupation}}</h2>
+
+    <h3>Languages</h3>
+    <ol>
+        {{#language}}
+        <li>
+            {{.}}
+        </li>       
+        {{/language}}
+    </ol>
+
+    <form action="/addprofile" method="POST">
+        <input type="text" name="name" placeholder="Type your Name!"> <br>
+        <input type="text" name="username" placeholder="Username!"> <br>
+        <input type="text" name="image" placeholder="Image (/images/example.jpg)"> <br>
+        <input type="text"name="occupation" placeholder="Type your occupation!"> <br>
+        <input type="text" name="language" placeholder="Type your Languages!"> <br>
+        <input type="submit" value="Add profile">
+
+    </form>
+</body>
+</html>

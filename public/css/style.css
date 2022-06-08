@@ -1,0 +1,9 @@
+h1 {
+    color: red;
+    text-transform: capitalize;
+}
+
+.profile-image{
+    /* max-width: 300px; */
+    max-height: 300px;
+}
